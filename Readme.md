@@ -1,7 +1,7 @@
 
 # URL Shortener
 
-A simple URL shortener service built with Node.js, Express, and MongoDB.
+A simple URL shortener service built with Node.js, Express, EJS, and MongoDB.
 
 ## Table of Contents
 
@@ -17,6 +17,7 @@ A simple URL shortener service built with Node.js, Express, and MongoDB.
 - Redirect users from short URLs to the original long URLs.
 - Track visit analytics for each short URL.
 - MongoDB integration for data storage.
+- EJS templates for dynamic rendering.
 
 ## Prerequisites
 
@@ -49,7 +50,7 @@ Before you begin, ensure you have met the following requirements:
 4. **Create a `.env` file in the project root and set the following environment variables:**
 
    ```env
-   MONGODB_URI=mongodb://localhost:27017/url_shortener
+   MONGODB_URL=mongodb://localhost:27017/url_shortener
    ```
 
    Adjust the MongoDB URI based on your MongoDB setup.
@@ -64,10 +65,9 @@ Before you begin, ensure you have met the following requirements:
 
 ## Endpoints
 
-- `POST /url`: Shorten a URL.
+- `GET /`: Homepage.
 - `GET /url/:id`: Redirect to the original URL.
 - `GET /url/analytics/:id`: Get visit analytics for a short URL.
-
 
 ## Contributing
 
