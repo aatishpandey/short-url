@@ -14,7 +14,7 @@ const generateShortUrl = async (req, res) => {
     visitHistory: [],
   });
 
-  res.json({ id: shortID });
+  res.render("home", { id: shortID });
 };
 
 //redirect url
